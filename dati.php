@@ -1,7 +1,7 @@
 <?php
     $campo=$_POST["campo"];
     $censura=$_POST["censura"];
-
+    $testocensurato= str_replace($censura,"***",$campo);
 ?>
 
 
@@ -14,6 +14,6 @@
 </head>
 <body>
 <p> <?php echo $campo;?>  <?php echo strlen($campo); ?> </p>
-<p> <?php echo str_replace($censura,"***",$campo); ?> <?php echo strlen($campo); ?> </p>
+<p> <?php echo $testocensurato ?> <?php echo strlen($testocensurato); ?> </p>
 </body>
 </html>
